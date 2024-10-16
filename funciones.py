@@ -173,3 +173,5 @@ def seleccion_menu() -> None:
             case 6: calcular_porcentaje_juguetes_por_tipo(existencias)
             case 7: seguir = "n"
             case _: print("Ingresar una opcion valida")
+
+seleccion_menu()
