@@ -136,11 +136,12 @@ def calcular_porcentaje_juguetes_por_tipo(existencias):
             tipos_juguetes[tipo_count] = tipo_juguete
             cantidades_tipos[tipo_count] = cantidad
             tipo_count += 1
-    print("Porcentaje de juguetes de cada tipo: ")
+
     for i in range(tipo_count):
         porcentaje = (cantidades_tipos[i] / total_juguetes) * 100 if total_juguetes > 0 else 0
         porcentaje_redondeado = float(porcentaje * 100) / 100
         print(str(tipos_juguetes[i]) + ": " + str(porcentaje_redondeado) + "%")
+    print("Porcentaje de juguetes de cada tipo: ", {porcentaje_redondeado})
 
 def menu():
     """Muestra las opciones del menu"""   
@@ -159,7 +160,7 @@ def menu():
     return seleccion
 
 
-def seleccion_menu() -> None:
+def seleccion_menu() -> None: 
     """Funcion para la seleccion de la funcion que desea usar"""
     seguir = "s"
     while seguir == "s":
